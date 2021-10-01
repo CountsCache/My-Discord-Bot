@@ -1,12 +1,8 @@
 import discord
 import requests
 import json
-from keep_alive import keep_alive
-import music
 
 import os
-
-cogs = [music]
 
 client = discord.Client()
 
@@ -40,10 +36,6 @@ async def on_message(message):
     waifu = get_waifu()
     await message.channel.send(waifu)
 
-# this keeps the webserver running
-keep_alive()
-#add music player cog
-bot.add_cog(Player(bot))
 #Use TOKEN variable to run bot (keep secret)
 TOKEN = os.environ['key']
 client.run(TOKEN)
