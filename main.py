@@ -16,7 +16,7 @@ def get_quote():
   return(quote)
 
 
-gets a random winking gif from the waifu api when a user uses the command $ink
+# gets a random winking gif from the waifu api when a user uses the command $wink
 def get_waifu():
   response = requests.get("https://api.waifu.pics/sfw/wink")
   json_data = json.loads(response.text)
